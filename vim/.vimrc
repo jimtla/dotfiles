@@ -102,6 +102,7 @@ au FileType go nmap <Leader>d <Plug>(go-def)
 au FileType go nmap <Leader>sd <Plug>(go-def-split)
 au FileType go nmap <Leader>vd <Plug>(go-def-vertical)
 let g:go_oracle_scope_file="jello/integrations/echub jello/sfe jello/vfe"
+let g:go_fmt_command = "goimports"
 
 nnoremap <Leader>qj ^yw$a `json:"phcrsA"`j
 
