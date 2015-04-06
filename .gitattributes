@@ -1,1 +1,2 @@
 fish/incl/env.fish filter=git-crypt diff=git-crypt
+psql/.pgpass filter=git-crypt diff=git-crypt

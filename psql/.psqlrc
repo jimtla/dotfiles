@@ -1,0 +1,7 @@
+\set HISTFILE ~/.psql_history- :DBNAME
+\set HISTSIZE 5000
+\pset null '<<NULL>>'
+\pset linestyle unicode
+\pset border 2
+\pset format wrapped
+\timing
