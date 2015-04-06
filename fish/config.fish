@@ -12,26 +12,17 @@ function fish_prompt
     set_color $fish_color_cwd
     echo -n (prompt_pwd)
     set_color normal
-    echo -n '|'
-    if test $fish_bind_mode = 'insert'
-        echo -n 'i'
-    else
-        set_color red
-        echo -n 'd'
-        set_color normal
-    end
     echo -n '>'
 end
 
 # Keybindings
 function fish_user_key_bindings
-    fish_vi_key_bindings
-    bind -M insert \ck up-or-search
     # HACK(jim): I have \cj bound to f7 in iterm2 because \cj is indistinguisable
     # from enter in fish
-    bind -M insert -k f7 down-or-search 
-    bind -M insert \ch backward-char
-    bind -M insert \cl forward-char
+    bind -k f7 down-or-search 
+    bind \ck up-or-search
+    bind \ch backward-char
+    bind \cl forward-char
 end
 
 
