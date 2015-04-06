@@ -1,2 +1,3 @@
 vim/.vim/
 *.swp
+.DS_Store
