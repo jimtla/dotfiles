@@ -1,11 +1,14 @@
-set -x PATH $PATH /Users/jim/bin
-set -x PATH $PATH /Users/jim/installed/arcanist/bin
+set -x PATH $PATH ~/bin
+set -x PATH $PATH ~/installed/arcanist/bin
 set -x PATH $PATH /Applications/Postgres93.app/Contents/MacOS/bin
+set -x PATH $PATH /Applications/Postgres.app/Contents/Versions/9.3/bin
+set -x PATH $PATH ~/.rbenv/bin
+rbenv init - > /dev/null
 
 set -x EDITOR vim
 
-set -x GOPATH $GOPATH /Users/jim/programs/go/workspace
-set -x PATH $PATH /Users/jim/programs/go/workspace/bin
+set -x GOPATH $GOPATH ~/programs/go/workspace
+set -x PATH $PATH ~/programs/go/workspace/bin
 
 # Prompt
 function fish_prompt
@@ -23,6 +26,7 @@ function fish_user_key_bindings
     bind \ck up-or-search
     bind \ch backward-char
     bind \cl forward-char
+    bind \cp 'commandline ""'
 end
 
 
@@ -48,7 +52,7 @@ source ~/.config/fish/incl/save.fish
 source ~/.config/fish/incl/env.fish
 
 # Docker Automatic Setup
-set -x DOCKER_CERT_PATH /Users/jim/.boot2docker/certs/boot2docker-vm
+set -x DOCKER_CERT_PATH ~/.boot2docker/certs/boot2docker-vm
 set -x DOCKER_TLS_VERIFY 1
 set -x DOCKER_HOST tcp://192.168.59.103:2376
 
